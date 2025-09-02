@@ -9,7 +9,10 @@ interface MobileMenuBarProps {
   onClick: Dispatch<SetStateAction<boolean>>;
 }
 
-const MobileMenuBar: React.FC<MobileMenuBarProps> = ({ MenuVisible, onClick }) => {
+const MobileMenuBar: React.FC<MobileMenuBarProps> = ({
+  MenuVisible,
+  onClick,
+}) => {
   const navLinks = useNavlinks();
 
   return (

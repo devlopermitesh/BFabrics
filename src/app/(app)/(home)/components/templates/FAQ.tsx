@@ -7,12 +7,14 @@ import BorderView from "../atoms/BorderView";
 import { twMerge } from "tailwind-merge";
 import Answer from "../atoms/Answer";
 
-const FAQSection=()=>{
-const [Category, setCategory] = useState<"All"|"Ordering"|"Shipping"|"Return"|"Support"|string>("All")
+const FAQSection = () => {
+  const [Category, setCategory] = useState<
+    "All" | "Ordering" | "Shipping" | "Return" | "Support" | string
+  >("All");
   const queryResult = useFAQ(Category);
   const { renderWithStates } = useConditionalRender(queryResult);
 
-return (
+  return (
     <BorderView className="flex w-full rounded-xl border-b-0 border-l-0 border-r-0">
       {renderWithStates(
         (data) => {
@@ -39,7 +41,7 @@ return (
                           `p-2 px-4 border border-dashed border-inactive rounded text-inactive font-thin font-primary`,
                           item === Category
                             ? "bg-sand text-black"
-                            : "bg-lightdark"
+                            : "bg-lightdark",
                         )}
                       >
                         {item}
@@ -55,26 +57,23 @@ return (
                   className="absolute h-64 w-64 object-contain top-0 -right-20 z-0 hidden md:block"
                 />
               </div>
-<div className="grid grid-cols-1 md:grid-cols-2 ">
-{
-    data[0].Question.map((item,index)=>(
-      <BorderView key={index} className="mt-0">
-        <Answer  item={item}/>
-        </BorderView>
-    ))
-}
-</div>
-
+              <div className="grid grid-cols-1 md:grid-cols-2 ">
+                {data[0].Question.map((item, index) => (
+                  <BorderView key={index} className="mt-0">
+                    <Answer item={item} />
+                  </BorderView>
+                ))}
               </div>
-                )
-            
-            },{
+            </div>
+          );
+        },
+        {
           loadingText: "Loading FAQ...",
           emptyText: "No FAQ found",
           errorText: "Failed to load FAQ",
-            })
-            }
-              </BorderView>
-)
-}
-export default FAQSection
+        },
+      )}
+    </BorderView>
+  );
+};
+export default FAQSection;

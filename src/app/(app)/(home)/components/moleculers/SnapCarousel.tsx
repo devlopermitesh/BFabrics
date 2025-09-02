@@ -1,10 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import GetIcon from "@/utils/getIcon";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Images {
   _id: string;
@@ -16,7 +20,10 @@ interface SnapCarouselProps {
   interval?: number;
 }
 
-const SnapCarousel: React.FC<SnapCarouselProps> = ({ Images, interval = 3000 }) => {
+const SnapCarousel: React.FC<SnapCarouselProps> = ({
+  Images,
+  interval = 3000,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalItems = Images.length;
 
@@ -61,7 +68,10 @@ const SnapCarousel: React.FC<SnapCarouselProps> = ({ Images, interval = 3000 }) 
               p-2 md:p-6 rounded-lg z-10 relative cursor-pointer"
           >
             Shop Now
-            <GetIcon name="Arrowout" className="font-thin size-5 text-sand ml-2" />
+            <GetIcon
+              name="Arrowout"
+              className="font-thin size-5 text-sand ml-2"
+            />
           </Button>
         </div>
       </div>

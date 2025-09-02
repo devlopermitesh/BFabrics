@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React from "react";
 
 // Simple and clean query handler for Next.js
 export const useConditionalRender = <T,>(queryResult: {
@@ -14,7 +14,7 @@ export const useConditionalRender = <T,>(queryResult: {
       loadingText?: string;
       emptyText?: string;
       errorText?: string;
-    }
+    },
   ): React.ReactNode => {
     const { data, isLoading, error, isError } = queryResult;
 
@@ -44,7 +44,9 @@ export const useConditionalRender = <T,>(queryResult: {
     if (!data || (Array.isArray(data) && data.length === 0)) {
       return (
         <div className="flex items-center justify-center h-96">
-          <p className="text-lg text-gray-600">{options?.emptyText || "No data available"}</p>
+          <p className="text-lg text-gray-600">
+            {options?.emptyText || "No data available"}
+          </p>
         </div>
       );
     }

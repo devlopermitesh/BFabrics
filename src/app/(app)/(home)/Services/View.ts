@@ -1,46 +1,55 @@
-import { fakeCollectionProducts, fakeCounterStatics, FakeFAQ, fakeHighlightFeatures, FakenewAddition, fakeSnapImages, FakeTestinomal, fakeWorkflowSteps } from "@/FakeData/data"
-import { asyncHandler } from "@/utils/asynchandler"
+import {
+  fakeCollectionProducts,
+  fakeCounterStatics,
+  FakeFAQ,
+  fakeHighlightFeatures,
+  FakenewAddition,
+  fakeSnapImages,
+  FakeTestinomal,
+  fakeWorkflowSteps,
+} from "@/FakeData/data";
+import { asyncHandler } from "@/utils/asynchandler";
 
-class View{
-    constructor()
-    {
-    }
-    GetSnapImages=async()=>{
+class View {
+  constructor() {}
+  GetSnapImages = async () => {
     await new Promise((res) => setTimeout(res, 500));
     return fakeSnapImages;
     return await asyncHandler({
-        method:"GET",
-        url:""
-    })
-    }
-    GetCounterStattics=async()=>{
+      method: "GET",
+      url: "",
+    });
+  };
+  GetCounterStattics = async () => {
     await new Promise((res) => setTimeout(res, 500));
     return fakeCounterStatics;
-    }
-    GetHighlightFeature=async()=>{
+  };
+  GetHighlightFeature = async () => {
     await new Promise((res) => setTimeout(res, 500));
     return fakeHighlightFeatures;
-    }
-    GetWorkflow=async()=>{
+  };
+  GetWorkflow = async () => {
     await new Promise((res) => setTimeout(res, 500));
     return fakeWorkflowSteps;
-    }
-    GetCollection=async(category:string)=>{
+  };
+  GetCollection = async (category: string) => {
+    console.log(category);
     await new Promise((res) => setTimeout(res, 500));
     return fakeCollectionProducts;
-    }
-    GetTestinomal=async()=>{
+  };
+  GetTestinomal = async () => {
     await new Promise((res) => setTimeout(res, 500));
     return FakeTestinomal;
-    }
-    GetFAQ=async(Category:string)=>{
-     await new Promise((res) => setTimeout(res, 500));
+  };
+  GetFAQ = async (Category: string) => {
+    console.log(Category);
+    await new Promise((res) => setTimeout(res, 500));
     return FakeFAQ;
-    }
-    GetNewAddition=async()=>{
-   await new Promise((res) => setTimeout(res, 500));
+  };
+  GetNewAddition = async () => {
+    await new Promise((res) => setTimeout(res, 500));
     return FakenewAddition;
-    }
+  };
 }
 
-export const view=new View()
+export const view = new View();

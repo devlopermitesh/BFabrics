@@ -31,7 +31,9 @@ const Logo: React.FC<LogoProps> = ({
           className="rounded object-cover"
         />
       )}
-      {showText && <span className="text-xl font-primary text-white ">B FASHION</span>}
+      {showText && (
+        <span className="text-xl font-primary text-white ">B FASHION</span>
+      )}
     </div>
   );
 };

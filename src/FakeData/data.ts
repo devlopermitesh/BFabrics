@@ -1,135 +1,146 @@
-import StarIcon from "@/assets/StarIconhigh.png"
-import StarHighImage from "@/assets/StarImage.png"
-import FashionIcon from "@/assets/FashionIconHigh.png"
-import FashionImage from "@/assets/FashionHighImage.png"
-import LaughIcon from "@/assets/LaughFaceicon.png"
-import LaughImage from "@/assets/LaughtImage.png"
-import TrophyIcon from "@/assets/TrophyIcon.png"
-import TrophyImage from "@/assets/TrophyImage.png"
-import pencilIcon from "@/assets/PencilHighIcon.png"
-import pencilImage from "@/assets/PencilImage.png"
-import BrightIcon from "@/assets/brightIcon.png"
-import BrightImage from "@/assets/BrightIconImage.png"
-import Star3 from "@/assets/star3.png"
-import Star2 from "@/assets/star2.png"
-import Star1 from "@/assets/star1.png"
-import ProductImage from "@/assets/ProductImage.png"
-import testimonalUser from "@/assets/Boytestimonal.png"
-import bgCard from "@/assets/BgCard.png"
+import StarIcon from "@/assets/StarIconhigh.png";
+import StarHighImage from "@/assets/StarImage.png";
+import FashionIcon from "@/assets/FashionIconHigh.png";
+import FashionImage from "@/assets/FashionHighImage.png";
+import LaughIcon from "@/assets/LaughFaceicon.png";
+import LaughImage from "@/assets/LaughtImage.png";
+import TrophyIcon from "@/assets/TrophyIcon.png";
+import TrophyImage from "@/assets/TrophyImage.png";
+import pencilIcon from "@/assets/PencilHighIcon.png";
+import pencilImage from "@/assets/PencilImage.png";
+import BrightIcon from "@/assets/brightIcon.png";
+import BrightImage from "@/assets/BrightIconImage.png";
+import Star3 from "@/assets/star3.png";
+import Star2 from "@/assets/star2.png";
+import Star1 from "@/assets/star1.png";
+import ProductImage from "@/assets/ProductImage.png";
+import testimonalUser from "@/assets/Boytestimonal.png";
+import bgCard from "@/assets/BgCard.png";
 export interface ImageItem {
   _id: string;
   url: string;
 }
 
 export const fakeSnapImages: ImageItem[] = [
-  { _id: "1", url: "https://i.ibb.co/60TzGGZG/Screenshot-2025-09-02-093049.png" },
-  { _id: "2", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4MPzWjltaz6nmd4I2kBgEOCTLkho260p4vA&s" }
+  {
+    _id: "1",
+    url: "https://i.ibb.co/60TzGGZG/Screenshot-2025-09-02-093049.png",
+  },
+  {
+    _id: "2",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4MPzWjltaz6nmd4I2kBgEOCTLkho260p4vA&s",
+  },
 ];
 
+export const fakeCounterStatics = [
+  {
+    category: ["All", "MAN", "WOMAN", "KIDS"],
+    punchLine: "Elevate Your Style with StyleLoom",
+    descrption:
+      "Explore a world of fashion at StyleLoom, where trends meet affordability. Immerse yourself in the latest styles and seize exclusive promotions.",
+    Statics: [
+      {
+        name: "Fashion Products",
+        count: "1,500",
+      },
+      {
+        name: "New arrivals every month.",
+        count: "50",
+      },
+      {
+        name: "OFF on select items.",
+        count: "30%",
+      },
+      {
+        name: "Customer Satisfaction Rate.",
+        count: "95%",
+      },
+    ],
+  },
+];
 
-export const fakeCounterStatics=[
-    {
-        category:["All","MAN","WOMAN","KIDS"],
-        punchLine:"Elevate Your Style with StyleLoom",
-        descrption:"Explore a world of fashion at StyleLoom, where trends meet affordability. Immerse yourself in the latest styles and seize exclusive promotions.",
-        Statics:[
-            {
-                name:"Fashion Products",
-                count:"1,500"
-            },
-            {
-                name:"New arrivals every month.",
-                count:"50"
-            },
-            {
-                name:"OFF on select items.",
-                count:"30%"
-            },
-             {
-                name:"Customer Satisfaction Rate.",
-                count:"95%"
-            }
-        ]
-    }
-]
+export const fakeHighlightFeatures = [
+  {
+    punchLine: "Crafting Trends, Inspiring Confidence",
+    descp:
+      "Explore a world of fashion at StyleLoom, where trends meet affordability.",
+    Features: [
+      {
+        cardType: "HighIconLight",
+        icon: StarIcon.src,
+        iconHighImage: StarHighImage.src,
+        heading: "Passionate Craftsmanship",
+        desc: "Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.",
+      },
+      {
+        cardType: "HighIconLight",
+        icon: FashionIcon.src,
+        iconHighImage: FashionImage.src,
+        heading: "Fashion Forward",
+        desc: "We're more than a brand; we're trendsetters, curating styles that empower and inspire confidence.",
+      },
+      {
+        cardType: "HighIconLight",
+        icon: LaughIcon.src,
+        iconHighImage: LaughImage.src,
+        heading: "Customer-Centric Approach",
+        desc: "At StyleLoom, our customers are at the heart of everything we do. Your satisfaction is our measure of success.",
+      },
+      {
+        cardType: "HighIconLight",
+        icon: TrophyIcon.src,
+        iconHighImage: TrophyImage.src,
+        heading: "Global Inspiration",
+        desc: "Influenced by global trends, we bring you a diverse and dynamic collection, embodying the spirit of fashion from around the world.",
+      },
+      {
+        cardType: "HighIconLight",
+        icon: pencilIcon.src,
+        iconHighImage: pencilImage.src,
+        heading: "Empowering Your Style",
+        desc: "Beyond clothing, StyleLoom is a lifestyle. Join us on a journey of self-expression and empowerment through fashion",
+      },
+      {
+        cardType: "HighIconLight",
+        icon: BrightIcon.src,
+        iconHighImage: BrightImage.src,
+        heading: "Sustainable Practices",
+        desc: "StyleLoom is committed to sustainability, integrating eco-friendly practices into our production process.",
+      },
+    ],
+  },
+];
 
-export const fakeHighlightFeatures=[
-    {
-        punchLine:"Crafting Trends, Inspiring Confidence",
-        descp:"Explore a world of fashion at StyleLoom, where trends meet affordability.",
-        Features:[
-            {
-                cardType:"HighIconLight",
-                icon:StarIcon.src,
-                iconHighImage:StarHighImage.src,
-                heading:"Passionate Craftsmanship",
-                desc:"Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation."
-            },
-            {
-                cardType:"HighIconLight",
-                icon:FashionIcon.src,
-                iconHighImage:FashionImage.src,
-                heading:"Fashion Forward",
-                desc:"We're more than a brand; we're trendsetters, curating styles that empower and inspire confidence."
-            },
-            {
-                cardType:"HighIconLight",
-                icon:LaughIcon.src,
-                iconHighImage:LaughImage.src,
-                heading:"Customer-Centric Approach",
-                desc:"At StyleLoom, our customers are at the heart of everything we do. Your satisfaction is our measure of success."
-            },
-            {
-                cardType:"HighIconLight",
-                icon:TrophyIcon.src,
-                iconHighImage:TrophyImage.src,
-                heading:"Global Inspiration",
-                desc:"Influenced by global trends, we bring you a diverse and dynamic collection, embodying the spirit of fashion from around the world."
-            },
-            {
-               cardType:"HighIconLight",
-                icon:pencilIcon.src,
-                iconHighImage:pencilImage.src,
-                heading:"Empowering Your Style",
-                desc:"Beyond clothing, StyleLoom is a lifestyle. Join us on a journey of self-expression and empowerment through fashion"
-            },
-            {
-                cardType:"HighIconLight",
-                icon:BrightIcon.src,
-                iconHighImage:BrightImage.src,
-                heading:"Sustainable Practices",
-                desc:"StyleLoom is committed to sustainability, integrating eco-friendly practices into our production process."
-            }
-        ]
-    }
-]
-
-export const fakeWorkflowSteps=[
-    {
-        punchLine:"Navigating the StyleLoom Fashion Journey. ",
-        descp:"At StyleLoom, we've designed a straightforward shopping experience to make fashion accessible.",
-        imageCover:Star2.src,
-        Steps:[
-            {
-                heading:"Discover Trends",
-                descp:"Explore our curated collection of over 1000 styles, spanning global fashion trends."
-            },
-            {
-                heading:"Effortless Navigation",
-                descp:"Intuitive filters and categories help you find the perfect pieces tailored to your style."
-            },
-            {
-                heading:"Secure Checkout",
-                descp:"Multiple payment options and encrypted transactions ensure a safe and hassle-free purchase."
-            },
-            {
-                heading:"Unbox Happiness",
-                descp:"Unbox a fashion-forward experience delivered right to your door, ready to elevate your style."
-            }
-        ]
-
-    }
-]
+export const fakeWorkflowSteps = [
+  {
+    punchLine: "Navigating the StyleLoom Fashion Journey. ",
+    descp:
+      "At StyleLoom, we've designed a straightforward shopping experience to make fashion accessible.",
+    imageCover: Star2.src,
+    Steps: [
+      {
+        heading: "Discover Trends",
+        descp:
+          "Explore our curated collection of over 1000 styles, spanning global fashion trends.",
+      },
+      {
+        heading: "Effortless Navigation",
+        descp:
+          "Intuitive filters and categories help you find the perfect pieces tailored to your style.",
+      },
+      {
+        heading: "Secure Checkout",
+        descp:
+          "Multiple payment options and encrypted transactions ensure a safe and hassle-free purchase.",
+      },
+      {
+        heading: "Unbox Happiness",
+        descp:
+          "Unbox a fashion-forward experience delivered right to your door, ready to elevate your style.",
+      },
+    ],
+  },
+];
 
 export const fakeCollectionProducts = [
   {
@@ -292,11 +303,11 @@ export const FakeTestinomal = [
   },
 ];
 
-
 export const FakeFAQ = [
   {
     punchLine: "Have Questions? We Have Answers.",
-    descp: "Ease into the world of StyleLoom with clarity. Our FAQs cover a spectrum of topics.",
+    descp:
+      "Ease into the world of StyleLoom with clarity. Our FAQs cover a spectrum of topics.",
     imagecover: Star1.src,
     category: ["All", "Ordering", "Shipping", "Return", "Support"],
     Question: [
@@ -359,17 +370,18 @@ export const FakeFAQ = [
   },
 ];
 
-export const FakenewAddition=[
-    {
-        additionType:"visitNew",
-        background:"#C2B4A3",
-        heading:"elevate your wardrobe",
-        descp:"Don't miss out – experience the epitome of fashion by clicking 'Buy Now' and embrace a world of chic elegance delivered to your doorstep. Your style journey begins here.",
-        ImageCover:bgCard.src,
-        visithref:"/newArrival",
-        visitTitle:"Shop Now"
-    }
-]
+export const FakenewAddition = [
+  {
+    additionType: "visitNew",
+    background: "#C2B4A3",
+    heading: "elevate your wardrobe",
+    descp:
+      "Don't miss out – experience the epitome of fashion by clicking 'Buy Now' and embrace a world of chic elegance delivered to your doorstep. Your style journey begins here.",
+    ImageCover: bgCard.src,
+    visithref: "/newArrival",
+    visitTitle: "Shop Now",
+  },
+];
 export const FlipSlip = [
   "Kurta Classic",
   "DesiFusion Tee",
@@ -385,5 +397,5 @@ export const FlipSlip = [
   "ChikanKari Casual",
   "Bollywood Retro Tee",
   "Street Desi Tee",
-  "Indigo Dye Shirt"
+  "Indigo Dye Shirt",
 ];

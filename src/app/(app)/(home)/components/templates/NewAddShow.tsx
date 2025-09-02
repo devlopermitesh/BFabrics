@@ -1,13 +1,12 @@
 import { useConditionalRender } from "@/utils/queryHandlers";
-import { newAddition } from "../../api/api";
-import { twMerge } from "tailwind-merge";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import GetIcon from "@/utils/getIcon";
+import { useNewAddition } from "../../api/api";
 
 const NewAddShow = () => {
-  const queryResult = newAddition();
+  const queryResult = useNewAddition();
   const router = useRouter();
   const { renderWithStates } = useConditionalRender(queryResult);
 
@@ -16,7 +15,7 @@ const NewAddShow = () => {
       {renderWithStates(
         (data) => {
           return (
-            <div 
+            <div
               className="rounded-xl flex flex-row py-6 px-6 min-h-[200px] md:w-full shadow-lg overflow-hidden relative"
               style={{ backgroundColor: data[0].background }}
             >
@@ -28,7 +27,7 @@ const NewAddShow = () => {
                 <p className="text-black/80 font-primary font-light text-base max-w-lg leading-relaxed">
                   {data[0].descp}
                 </p>
-                <Button 
+                <Button
                   className="w-fit bg-black text-white hover:bg-black/90 px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg"
                   onClick={() => router.push(data[0].visithref)}
                 >
@@ -39,7 +38,7 @@ const NewAddShow = () => {
 
               {/* Image Section */}
               <div className="flex-1 relative min-h-[150px]">
-                <Image 
+                <Image
                   src={data[0].ImageCover}
                   fill
                   alt="promotional background"
@@ -54,7 +53,7 @@ const NewAddShow = () => {
           loadingText: "Loading New Addition...",
           emptyText: "No new addition found",
           errorText: "Failed to load new addition",
-        }
+        },
       )}
     </div>
   );

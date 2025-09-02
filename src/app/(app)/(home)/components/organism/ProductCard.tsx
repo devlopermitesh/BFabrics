@@ -21,12 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
     <div className="flex flex-col rounded-2xl border border-zinc-800 overflow-hidden bg-black ">
       {/* Image */}
       <div className="relative w-full h-80">
-        <Image
-          src={item.image}
-          alt={item.name}
-          fill
-          className="object-cover"
-        />
+        <Image src={item.image} alt={item.name} fill className="object-cover" />
       </div>
 
       {/* Content */}
@@ -46,9 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
         </div>
 
         {/* Title */}
-        <h3 className="text-white font-semibold text-lg">
-          {item.name}
-        </h3>
+        <h3 className="text-white font-semibold text-lg">{item.name}</h3>
 
         {/* Fit + Price */}
         <div className="flex justify-between text-sm text-zinc-400">
@@ -56,7 +49,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
           <span>
             Price:{" "}
             <span className="text-white font-medium">
-              {item.current}{item.price}
+              {item.current}
+              {item.price}
             </span>
           </span>
         </div>

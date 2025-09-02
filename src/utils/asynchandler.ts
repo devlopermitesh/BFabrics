@@ -2,7 +2,7 @@ import axios, { AxiosError, AxiosRequestConfig } from "axios";
 
 // ✅ Axios instance (custom config ke liye)
 const api = axios.create({
-  baseURL:"this",
+  baseURL: "this",
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
@@ -11,7 +11,7 @@ const api = axios.create({
 
 // ✅ Async handler
 export const asyncHandler = async <T>(
-  config: AxiosRequestConfig
+  config: AxiosRequestConfig,
 ): Promise<T | null> => {
   try {
     const response = await api(config);
@@ -23,7 +23,7 @@ export const asyncHandler = async <T>(
     console.error(
       "API Error:",
       err.response?.status,
-      err.response?.data || err.message
+      err.response?.data || err.message,
     );
 
     return null;

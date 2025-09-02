@@ -9,7 +9,7 @@ import MobileMenuBar from "./MobileMenuBar";
 
 const Navbar = () => {
   const navLinks = useNavlinks();
- const [MobileMenuOpen,setMobileMenuOpen]=useState(false)
+  const [MobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <nav className="flex items-center justify-between w-full h-24 px-6 bg-[var(--background)]">
       {/* Left: Links */}
@@ -34,23 +34,22 @@ const Navbar = () => {
         <Button className="bg-lightdark ">
           <GetIcon name="cart" className="text-white hover:text-white" />
         </Button>
-        <Button className=" bg-sand  text-black hover:bg-[#8d7d6a] hover:text-white font-semibold
-        font-primary cursor-pointer hidden  md:flex">
+        <Button
+          className=" bg-sand  text-black hover:bg-[#8d7d6a] hover:text-white font-semibold
+        font-primary cursor-pointer hidden  md:flex"
+        >
           Contact
         </Button>
-{/* //Menubar button  */}
+        {/* //Menubar button  */}
 
-<MenuButton MenuVisible={MobileMenuOpen} onClick={setMobileMenuOpen}/>
-{
-    MobileMenuOpen &&
-    (
-<MobileMenuBar MenuVisible={MobileMenuOpen} onClick={setMobileMenuOpen}/>
-    )
-}
-
+        <MenuButton MenuVisible={MobileMenuOpen} onClick={setMobileMenuOpen} />
+        {MobileMenuOpen && (
+          <MobileMenuBar
+            MenuVisible={MobileMenuOpen}
+            onClick={setMobileMenuOpen}
+          />
+        )}
       </div>
-
-
     </nav>
   );
 };

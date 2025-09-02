@@ -22,7 +22,9 @@ const HighlighSection = () => {
           // Mobile => show min unless "View All" clicked
           // Desktop => always show all
           const visibleFeatures = isMobile
-            ? (ShowAll ? features : features.slice(0, ShowMin))
+            ? ShowAll
+              ? features
+              : features.slice(0, ShowMin)
             : features;
 
           return (
@@ -71,7 +73,7 @@ const HighlighSection = () => {
           loadingText: "Loading Statics...",
           emptyText: "No Statics found",
           errorText: "Failed to load Statics",
-        }
+        },
       )}
     </div>
   );

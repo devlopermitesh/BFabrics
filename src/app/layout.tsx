@@ -1,8 +1,6 @@
- 
- import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ClientProvider from "@/components/providers/ClientProvider";
 
 // Initialize fonts
@@ -38,11 +36,16 @@ export const metadata: Metadata = {
   },
 };
 
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}
+      >
         <ClientProvider>{children}</ClientProvider>
       </body>
     </html>

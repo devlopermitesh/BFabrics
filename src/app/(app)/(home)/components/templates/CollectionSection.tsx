@@ -50,7 +50,7 @@ const CollectionSection = () => {
                           `p-2 px-4 border border-dashed border-inactive rounded text-inactive font-thin font-primary`,
                           item === Category
                             ? "bg-sand text-black"
-                            : "bg-lightdark"
+                            : "bg-lightdark",
                         )}
                       >
                         {item}
@@ -92,7 +92,7 @@ const CollectionSection = () => {
           loadingText: "Loading Collection...",
           emptyText: "No products found",
           errorText: "Failed to load Collection",
-        }
+        },
       )}
     </BorderView>
   );
