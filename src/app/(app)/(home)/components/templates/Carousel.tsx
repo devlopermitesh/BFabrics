@@ -2,9 +2,14 @@
 import { useConditionalRender } from "@/utils/queryHandlers";
 import { useSnapImages } from "../../api/api";
 import SnapCarousel from "../moleculers/SnapCarousel";
+import { UseQueryResult } from "@tanstack/react-query";
+export interface ImageItem {
+  _id: string;
+  url: string;
+}
 
 const CarouselSection = () => {
-  const queryResult = useSnapImages();
+  const queryResult = useSnapImages() as UseQueryResult<ImageItem[], Error>;
   const { renderWithStates } = useConditionalRender(queryResult);
   return (
     <div>
