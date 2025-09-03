@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  name                String
+  designNumber        String
+  heroName            String?   // optional
+  bio                 String?   // optional
+  rollCount           Int
+  colorVariationCount Int
+  totalMeter          Float
+  width               Float
+  price               Float
+  roomNo              Int?
+  category            String
+  dealer              String?
+
+  media               Media[]   // relation to Media model
+
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model Media {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  type      MediaType
+  url       String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String   @db.ObjectId
+}
+
+enum MediaType {
+  Video
+  Image
+  Poster
+}
+
