@@ -11,6 +11,7 @@
     "lint": "npx eslint . --ext .ts,.tsx",
     "prepare": "cd .. && husky install .husky",
     "format": "npx prettier --write .",
+    "postinstall": "prisma generate",
     "check-format": "npx prettier --check .",
     "lint-all": "npm run lint && npx lint-staged &&  npm run check-format",
     "type-check": "tsc --noEmit"
